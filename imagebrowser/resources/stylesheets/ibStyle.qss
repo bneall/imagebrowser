@@ -1,0 +1,30 @@
+QListWidget, QTreeView {outline: none;}
+
+QTreeView::item { 
+                  margin: 1px;
+                  background-color: rgba(255,255,255,15);
+                }
+
+QTreeView::item:hover { 
+                         background-color: rgba(255,255,255,45); 
+                      }
+
+QListWidget::item { 
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+                    padding-left: 2px;
+                    padding-right: 2px;
+                    background-color: rgba(255,255,255,15);
+                    border: 1px solid rgb(50,50,50); 
+                    border-radius: 2px;
+                   }
+
+QListWidget::item:hover { 
+                          background-color: rgba(255,255,255,35);
+                        }
+
+
+QListWidget::item:selected { 
+                              background-color: rgba(255,255,255,75);
+                              border-color: rgb(255,133,29); 
+                           }
