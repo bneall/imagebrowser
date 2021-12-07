@@ -818,7 +818,7 @@ class IBView(QtWidgets.QWidget):
     def keyPressEvent(self, event):
         if event.key() == QtCore.Qt.Key_Delete:
             selectedItems = self.imageView.selectedItems()
-            self.removeFromCollection(selectedItems)
+            if selectedItems:
                 self.removeFromCollection(selectedItems)
 
     #_____________________________________________
