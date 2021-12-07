@@ -244,7 +244,7 @@ class IBBookmarkList(QtWidgets.QListWidget):
 
         if mimeData.hasUrls():
             for url in mimeData.urls():
-                path = url.toLocalFile()
+                path = os.path.normpath(url.toLocalFile())
                 pathList.append(path)
         
         return pathList
@@ -819,6 +819,7 @@ class IBView(QtWidgets.QWidget):
         if event.key() == QtCore.Qt.Key_Delete:
             selectedItems = self.imageView.selectedItems()
             self.removeFromCollection(selectedItems)
+                self.removeFromCollection(selectedItems)
 
     #_____________________________________________
     def addBookmark(self):
