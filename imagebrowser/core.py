@@ -128,12 +128,13 @@ class ThumbnailProperty(object):
                 self.isCurrent = True
 
         # File Resolution
-        self.sourceResolution = None
-        QtImgReader = QtGui.QImageReader()
-        QtImgReader.setFileName(self.sourcePath)
-        if QtImgReader.canRead():
-            sourceSize = QtImgReader.size()
-            self.sourceResolution = '%d x %d' % (sourceSize.width(), sourceSize.height())
+        # Disabled, too slow
+        # self.sourceResolution = None
+        # QtImgReader = QtGui.QImageReader()
+        # QtImgReader.setFileName(self.sourcePath)
+        # if QtImgReader.canRead():
+        #     sourceSize = QtImgReader.size()
+        #     self.sourceResolution = '%d x %d' % (sourceSize.width(), sourceSize.height())
 
 
     def clear(self):

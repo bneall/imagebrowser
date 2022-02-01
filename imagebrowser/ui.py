@@ -582,7 +582,7 @@ class IBImageList(QtWidgets.QListWidget):
         newItem.setData(32, tp)
         newItem.setTextAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignBottom)
         newItem.setIcon(QtGui.QIcon(QtGui.QPixmap(utils.getCustomIconPath(cfg.resourcePath,'default.png'))))
-        newItem.setToolTip('Path: %s\nResolution: %s' % (tp.sourcePath, tp.sourceResolution))
+        newItem.setToolTip('Path: %s' % tp.sourcePath)
         self.setItemSize(newItem)
         self.addItem(newItem)
 
